@@ -1,0 +1,69 @@
+{
+    "app": {
+        "name": "Alain",
+        "description": "Ng-zorro admin panel front-end framework"
+    },
+    "user": {
+        "name": "Admin",
+        "avatar": "./assets/tmp/img/avatar.jpg",
+        "email": ""
+    },
+    "menu": [{
+            "text": "主导航",
+            "i18n": "menu.main",
+            "group": false,
+            "hideInBreadcrumb": true,
+            "children": [{
+                    "text": "首页",
+                    "icon": "anticon-dashboard",
+                    "children": [{
+                        "text": "运营概览",
+                        "link": "/roleOne/dashboard/v1"
+                    }]
+                },
+
+                {
+                    "text":"主菜单1",
+                    "icon":"anticon-bulb",
+                    "children": [
+                        {
+                            "text": "子菜单1",
+                            "link": "/roleOne/module-one/page-list"
+                        },
+                        {
+                            "text": "子菜单2",
+                            "link": "/roleOne/module-one/page-add"
+                        }
+                    ]
+                },
+
+                {
+                    "text":"主菜单2",
+                    "icon":"anticon-bulb",
+                    "children": [
+                        {
+                            "text": "子菜单3",
+                            "link": "/roleOne/module-two/page-edit"
+                        }
+                    ]
+                },
+
+                {
+                    "text":"主菜单3",
+                    "icon":"anticon-bulb",
+                    "children": [
+                        {
+                            "text": "子菜单1",
+                            "link": "/roleOne/module-three/page-list"
+                        },
+                        {
+                            "text": "子菜单2",
+                            "link": "/roleOne/module-three/page-add"
+                        }
+                    ]
+                }
+            ]
+        }
+
+    ]
+}
