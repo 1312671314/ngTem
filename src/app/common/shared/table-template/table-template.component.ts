@@ -19,6 +19,7 @@ export class TableTemplateComponent {
   @Input() keyNameList: any;
   @Input() showPages: any;
   @Input() NoDataResult: any;
+  @Input() content: any;
   @Output() pageIndexOut = new EventEmitter();
   @Output() checkOut = new EventEmitter();
   @Output() editFuncOut = new EventEmitter();
@@ -31,6 +32,7 @@ export class TableTemplateComponent {
   constructor() {
     this.tableType = this.tableType ? this.tableType : 'ajaxTable';
     this.NoDataResult = this.NoDataResult ? this.NoDataResult : '未查询到数据';
+    console.log(this.content);
   }
 
   searchData() {
@@ -101,5 +103,16 @@ export class TableTemplateComponent {
       }
     });
     this.refreshStatus();
+  }
+
+  call(item: any, btn?: any, index?: any) {
+    // console.log(item);
+    // console.log(btn);
+    // console.log(index);
+    this.callFunc(btn.click, item);
+  }
+
+  callFunc(func: any, arg?: any) {
+    func.call(this.content, arg);
   }
 }
